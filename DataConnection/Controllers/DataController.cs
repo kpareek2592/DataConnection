@@ -11,13 +11,13 @@ namespace DataConnection.Controllers
 {
     public class DataController : ApiController
     {
-        //[HttpGet]
-        //[Route("api/data")]
-        //public HttpResponseMessage Get(DataContract dataContract)
-        //{
-        //    var result = SqlHelper.ExecuteProcedure(dataContract);
-        //    return Request.CreateResponse(HttpStatusCode.OK, result);
-        //}
+        [HttpGet]
+        [Route("api/data")]
+        public HttpResponseMessage Get(DataContract dataContract)
+        {
+            SqlHelper.ExecuteProcedure(dataContract);
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
 
         [HttpGet]
         [Route("api/data1")]
